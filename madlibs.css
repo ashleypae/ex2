@@ -1,0 +1,87 @@
+* {
+  margin: 0px;
+  padding: 0px
+}
+
+h1 {
+    font-family: 'Gloria Hallelujah';
+    text-align: center;  
+}
+
+img {
+    margin-left:255px;
+    margin-bottom: 5px;
+}
+
+body {
+ width: 955px;
+ margin-left: auto;
+ margin-right: auto;
+  font-family: 'Gloria Hallelujah';
+  size: 14px;
+  padding: 24px;
+}
+
+
+section {
+    width: 955px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+em {
+  color: #FF059B;
+}
+
+
+form{
+    width: 955px;
+   text-align: center;
+}
+
+form input {
+  margin: 10px 4px;
+  padding: 8px;
+  font-size: 12px;
+    border: none;
+  border-bottom: 2pt solid #666;
+}
+
+form input[type="submit"] {
+font-family: 'Gloria Hallelujah';
+  size: 14px;
+  color: #FF059B;
+    font-size: 14px;
+    border:none;
+    background: none;
+    border-radius: 5px;
+    
+}
+
+
+form input[type="reset"] {
+font-family: 'Gloria Hallelujah';
+  size: 14px;
+    font-size: 14px;
+    background: none;
+    border: none;
+     border-radius: 5px;
+}
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+  background-color: #FF059B;
+}
+
+p {
+
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
