@@ -8,6 +8,13 @@ window.onload = function() {
   //capture the reset event
   document.f.onreset=resetPage;
 
+  var hasPlayed = false;
+    
+  var audio = new Audio('nsync.mp3'); 
+
+  var myMsg = document.getElementById("myMsg");
+    
+    
   //define process function
   function processForm() {
 
@@ -21,6 +28,7 @@ window.onload = function() {
     var howget = document.f.howget.value;
       
     var howlong = document.f.howlong.value;
+      
 
     //error detection
     if (name == "" || where == "" || why == "" || howget == "" || howlong == "") {
@@ -29,13 +37,16 @@ window.onload = function() {
     } else {
 
        //play song
-        var audio = new Audio('nsync.mp3');
-audio.play();
-        
-      //capture the msg element to change it's text and html    
-      var myMsg = document.getElementById("myMsg");
+        if(hasPlayed == false)
+        {
+          audio.play();
+          hasPlayed = true;
 
-   myMsg.innerHTML = "My dearest <em> " + name + "</em>, I know you <em> " + howget + "</em> to <em> " + where + "</em> because you said, ''<em> " + why + ".</em>'' I asked when you're coming back... You looked at me and said, ''<em> " + howlong + ".</em>'' It really hurts and bby I just want you back. <br> xoxo love justin";
+        }
+        
+
+     myMsg.innerHTML = "My dearest <em> " + name + "</em>, I know you <em> " + howget + "</em> to <em> " + where + "</em> because you said, ''<em> " + why + ".</em>'' I asked when you're coming back... You looked at me and said, ''<em> " + howlong + ".</em>'' It really hurts and bby I just want you back. <br> xoxo love justin";
+        
       myMsg.className = "show";
     }
   
@@ -50,13 +61,11 @@ audio.play();
     //change the class name
     myMsg.className = "hide";
 
-      
-      
+ 
     //reset the audio  
-sound.pause();
-sound.currentTime = 0;   
-      
-      
+  audio.pause();
+  audio.currentTime = 0;   
+  hasPlayed = false;
       
       
     //reset the name field
@@ -70,9 +79,7 @@ sound.currentTime = 0;
     //reset the howlong field
     howlong.value = "";
       
-    
-    return false;
-      
+    return false; 
       
     
   }

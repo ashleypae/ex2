@@ -72,6 +72,7 @@ font-family: 'Gloria Hallelujah';
 form input[type="submit"]:hover,
 form input[type="reset"]:hover {
   background-color: #FF059B;
+    color: white;
 }
 
 p {
